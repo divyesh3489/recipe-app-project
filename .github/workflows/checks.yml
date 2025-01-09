@@ -17,4 +17,4 @@ jobs: # jobs to run
       - name: Checkout code # name of the step
         uses: actions/checkout@v2 # action to check
       - name: Test # name of the step
-        run: docke compose run app sh -c "python manage.py test" # command to run
+        run: docker-compose run app sh -c "python manage.py test" # command to run
