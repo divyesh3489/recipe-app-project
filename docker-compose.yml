@@ -1,0 +1,14 @@
+# This file is used to define services and their configurations
+version: '3.9' # version of docker-compose
+
+services:
+  app: # service name
+    build: # build context
+      context: . # current directory
+    ports: # port mapping
+      - "8000:8000"
+    volumes: # volume mapping for live reload
+      - ./app:/app
+    command: > # command to run
+      sh -c "python manage.py runserver 0.0.0.0:8000"   
+

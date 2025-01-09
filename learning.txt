@@ -1,0 +1,21 @@
+1.What is Linting ?
+-> Tool to check code formatting and syntax errors,formatting issues ,typos.
+
+2.Testing ?
+-> Django test suite, setup tests par django app  , run tests with docker compose. command to run tests is 'docker-compose run --rm app sh -c"python manage.py test"'
+
+3.make project of django using docker and docker-compose  command is  'docker-compose run --rm app sh -c "django-admin.py startproject app ."'
+
+4.what is github actions ?
+-> Automation tool, Similar to Jenkins, CI/CD, Run jobs when code change,Automate tasks
+-> common uses are testing, linting, building, deploying
+
+5. How github actions work ?
+
+-> Trigger Push to github -> Job Run unit tests -> Result Success/Fail
+
+6. What is Docker Hub ?
+-> Repository for docker images, Store and share images, Public and private repositories
+
+
+
