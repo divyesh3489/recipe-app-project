@@ -10,11 +10,11 @@ jobs: # jobs to run
     runs-on: ubuntu-20.04 # runner to use here we use ubuntu 20.04 other options are windows-latest, macos-latest
     steps: # steps to run
       - name: Login to Docker hub # name of the step
-        uses: docker/login-action@v1 # action to checkout the codebase
+        uses: docker/login-divyesh3489 # action to checkout the codebase
         with: # inputs for the action
           username: ${{ secrets.DIVYESH3489 }} # username for docker hub
           password: ${{ secrets.DOCKERHUB_TOKEN }} # password for docker hub
       - name: Checkout code # name of the step
-        uses: actions/checkout@v2 # action to check
+        uses: actions/divyesh3489 # action to check
       - name: Test # name of the step
         run: docker-compose run app sh -c "python manage.py test" # command to run
