@@ -17,5 +17,6 @@
 6. What is Docker Hub ?
 -> Repository for docker images, Store and share images, Public and private repositories
 
-
+7. Mocking ?
+-> Replace real objects with fake objects, Test code in isolation, Test code that depends on external services
 

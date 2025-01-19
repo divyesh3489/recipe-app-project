@@ -20,10 +20,18 @@ WORKDIR /app
 EXPOSE 8000
 # Create a virtual environment in the /py/ directory.  Update pip to the latest version. Install the dependencies listed in the requirements.txt file. Remove the requirements.txt file. 
 # Create a new user The user will not have a password. This flag prevents the creation of a home directory for the user..
+# Install the PostgreSQL client library and the PostgreSQL development headers. This is required to install the psycopg2 package.
+# This command installs the PostgreSQL development headers and the musl-dev package, which is required to build the psycopg2 package.
+# Install the PostgreSQL development headers and the musl-dev package..
+# Remove the PostgreSQL development headers and the musl-dev package. This reduces the size of the Docker image.
 RUN python -m venv /py && \ 
     /py/bin/pip install --upgrade pip && \
+    apk add --update --no-cache postgresql-client && \
+    apk add --update --no-cache --virtual .tmp-build-dev \ 
+        build-base postgresql-dev musl-dev && \ 
     /py/bin/pip install -r /tmp/requirements.txt && \ 
     rm -rf /tmp && \
+    apk del .tmp-build-dev && \ 
     adduser \   
         --disabled-password \ 
         --no-create-home \
