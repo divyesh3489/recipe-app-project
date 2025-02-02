@@ -33,6 +33,27 @@
 11. Apply Migrate ?
 -> Use Django CLI , Command is 'python manage.py migrate' , apply migrations to database schema
 
+12. create Custom User Model ?
+-> Subclass AbstractBaseUser and PermissionsMixin , Define fields, Define methods, Define custom manager, Update settings.py, Update admin.py
+
+13 AbstractBaseUser ?
+-> Base class for custom user models, Provides core functionality, Subclass to create custom user models, Does not include fields like email, name
+ 
+14 PermissionsMixin ?
+-> Add permissions to custom user models, Provides methods to check permissions, Add permissions to custom user models, Check permissions in views,include default permissions and fields
+
+15. Custom Manager ?
+-> Custom methods to manage user objects, Create user, Create superuser, Filter users, Get users
+
+16. BaseUserManager ?
+-> Base class for custom user managers, Provides core functionality, Subclass to create custom user managers, Create user, Create superuser, Filter users, Get users
+
+17. Customise Django Admin ?
+-> Register models with admin, Define admin classes, Define list display, Define search fields, Define filters, Define ordering using BaseUserAdmin
+
+18. BaseUserAdmin ?
+-> Base class for custom admin classes, Provides core functionality, Subclass to create custom admin classes, Define list display, Define search fields, Define filters, Define ordering
+
 
 
 
