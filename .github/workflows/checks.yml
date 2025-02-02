@@ -24,4 +24,4 @@ jobs: # jobs to run
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose --version
       - name: Test # name of the step
-        run: docker-compose run app sh -c "python manage.py test" # command to run
+        run: docker-compose run app sh -c "python manage.py wait_for_db && python manage.py test" # command to run

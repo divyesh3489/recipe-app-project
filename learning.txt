@@ -20,3 +20,20 @@
 7. Mocking ?
 -> Replace real objects with fake objects, Test code in isolation, Test code that depends on external services
 
+8. Django ORM ?
+-> Object Relational Mapping, Python objects to database tables, Query database with python objects, Abstraction over SQL queries
+
+    Define Models -> Genrate Migrations -> Setup Database -> Store Data 
+9. What is a Model ?
+-> Class that represents a database table, Define fields and methods, Define relationships between tables, Custom python logic
+
+10. create a Migrations ?
+-> Use Django CLI , Command is 'python manage.py makemigrations'
+
+11. Apply Migrate ?
+-> Use Django CLI , Command is 'python manage.py migrate' , apply migrations to database schema
+
+
+
+
+
